@@ -5,9 +5,9 @@ public class AccountFilterTest {
     @isTest
     static void filterAccountsByDocumentNumberTest() {
 
-        List<Accout> accounts = new List<Account>();
-        accounts.add(new Account(Name = 'Teste01', DocumentNumber__c = '83673526022'));
-        accounts.add(new Account(Name = 'Teste02', DocumentNumber__c = '21673526022'));
+        List<Account> accounts = new List<Account>();
+        accounts.add(new Account(Name = 'Teste01', DocumentNumber__c = '67515642017'));
+        accounts.add(new Account(Name = 'Teste02', DocumentNumber__c = '28660268000179'));
         insert accounts;
 
         AccountFilter filter = new AccountFilter();
@@ -26,7 +26,7 @@ public class AccountFilterTest {
         changedAccount.DocumentNumber__c = 'X';
         oldAccounts.put(changedAccount.Id, changedAccount);
 
-        filteredAccounts = filter.filterByChangedDocumentNumber(accounts, changedAccount);
+        filteredAccounts = filter.filterByChangedDocumentNumber(accounts, oldAccounts);
 
         System.assertNotEquals(accounts.size(), filteredAccounts.size());
         System.assert(filteredAccounts.size() == 1);
