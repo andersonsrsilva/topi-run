@@ -6,8 +6,8 @@ public with sharing class AccountValidator {
 
         for (Account account : accounts) {
 
-            if(!validator.isCPF(account.DocumentNumber__c) || !validator.isCNPJ(account.DocumentNumber__c)) {
-                account.addError('CPF ou /CNPJ inválido');
+            if(!validator.isCPF(account.DocumentNumber__c) && !validator.isCNPJ(account.DocumentNumber__c)) {
+                account.addError('CPF ou CNPJ inválido');
             }
 
         }

@@ -31,11 +31,13 @@ public virtual class AccountTH  extends TriggerHandler {
 
     override
     public void beforeInsert() {
+        System.debug('Trigger de Conta verificada ' + Trigger.operationType);
         validateDocumentNumber();
     }
 
     override
     public void beforeUpdate() {
+        System.debug('Trigger de Conta verificada ' + Trigger.operationType);
         validateDocumentNumber();
     }
 

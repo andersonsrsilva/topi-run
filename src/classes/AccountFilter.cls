@@ -15,9 +15,11 @@ public with sharing class AccountFilter {
                 continue;
             }
 
-            if(account.DocumentNumber__c != oldAccounts.get(account.Id).DocumentNumber__c) {
-                filteredAccounts.add(account);
+            if(account.DocumentNumber__c == oldAccounts.get(account.Id).DocumentNumber__c) {
+                continue;
             }
+
+            filteredAccounts.add(account);
 
         }
 
