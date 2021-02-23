@@ -31,20 +31,20 @@ public virtual class AccountTH  extends TriggerHandler {
 
     override
     public void beforeInsert() {
-        System.debug('Trigger de Conta verificada ' + Trigger.operationType);
+        System.debug('Trigger de Conta verificada insert ' + Trigger.operationType);
         validateDocumentNumber();
     }
 
     override
     public void beforeUpdate() {
-        System.debug('Trigger de Conta verificada ' + Trigger.operationType);
+        System.debug('Trigger de Conta verificada update ' + Trigger.operationType);
         validateDocumentNumber();
     }
 
     virtual
     override
     public void afterUpdate() {
-        System.debug('Trigger de Conta acionada ' + Trigger.operationType);
+        System.debug('Trigger de Conta atualizada ' + Trigger.operationType);
         System.debug(JSON.serialize(newAccounts));
         System.debug(JSON.serialize(oldAccounts));
     }
