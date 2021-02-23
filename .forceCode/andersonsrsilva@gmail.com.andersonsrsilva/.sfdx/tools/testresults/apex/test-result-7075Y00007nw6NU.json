@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "outcome": "Passed",
+    "testsRan": 0,
+    "passing": 0,
+    "failing": 0,
+    "skipped": 0,
+    "passRate": "0%",
+    "failRate": "0%",
+    "skipRate": "0%",
+    "testStartTime": "Tue Feb 23 2021 17:12:13",
+    "testExecutionTimeInMs": 0,
+    "testTotalTimeInMs": 0,
+    "commandTimeInMs": 1314,
+    "hostname": "https://lpconsulting2-dev-ed.my.salesforce.com",
+    "orgId": "00D5Y000001N5jyUAC",
+    "username": "andersonsrsilva@gmail.com.andersonsrsilva",
+    "testRunId": "7075Y00007nw6NU",
+    "userId": "0055Y00000Ds4wIQAR"
+  },
+  "tests": []
+}

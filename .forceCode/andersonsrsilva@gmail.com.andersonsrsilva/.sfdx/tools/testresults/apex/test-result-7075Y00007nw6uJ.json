@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "outcome": "Passed",
+    "testsRan": 1,
+    "passing": 0,
+    "failing": 0,
+    "skipped": 1,
+    "passRate": "0%",
+    "failRate": "0%",
+    "skipRate": "100%",
+    "testStartTime": "Tue Feb 23 2021 17:20:43",
+    "testExecutionTimeInMs": 0,
+    "testTotalTimeInMs": 0,
+    "commandTimeInMs": 1353,
+    "hostname": "https://lpconsulting2-dev-ed.my.salesforce.com",
+    "orgId": "00D5Y000001N5jyUAC",
+    "username": "andersonsrsilva@gmail.com.andersonsrsilva",
+    "testRunId": "7075Y00007nw6uJ",
+    "userId": "0055Y00000Ds4wIQAR"
+  },
+  "tests": [
+    {
+      "id": "07M5Y000004CpMmUAK",
+      "queueItemId": "7095Y0000002aqkQAA",
+      "stackTrace": null,
+      "message": "O método filterAccountsByDocumentNunberTest não existe na classe do Apex com o ID:01p5Y000004LW2H",
+      "asyncApexJobId": "7075Y00007nw6uJQAQ",
+      "methodName": "filterAccountsByDocumentNunberTest",
+      "outcome": "Skip",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p5Y000004LW2HQAW",
+        "name": "AccountFilterTest",
+        "namespacePrefix": null,
+        "fullName": "AccountFilterTest"
+      },
+      "runTime": 0,
+      "testTimestamp": "2021-02-23T20:20:43.000+0000",
+      "fullName": "AccountFilterTest.filterAccountsByDocumentNunberTest"
+    }
+  ]
+}
