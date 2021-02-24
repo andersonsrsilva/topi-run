@@ -1,4 +1,7 @@
-@isTest
+/*
+* @author anderson.silva
+*/
+
 public class AccountFixtureFactory {
 
     public static Account newAccount(String name, Decimal annualRevenue, String category) {

@@ -1,3 +1,7 @@
+/*
+*@author anderson.silva
+*/
+
 public with sharing class AccountValidator {
 
     public List<Account> validateDocumentNumber(List<Account> accounts) {

@@ -1,6 +1,7 @@
 /**
  * @author: ercarval - topi
  */
+
 public class BrazilianDocumentValidator {
 
     /**
