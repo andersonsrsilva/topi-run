@@ -9,17 +9,23 @@ public class AccountValidatorTest {
         @isTest
         static void validateDocumentNumberTest() {
 
-            // List<Account> accounts = new List<Account> {
-            //     AccountFixtureFactory.createAccount('Teste01', 100000000, Account.Type.PREMIUM, '48913722062'),
-            //     AccountFixtureFactory.createAccount('Teste02', 15000, Account.Type.PREMIUM, '11111111111')
-            // };
+            List<Account> accounts = new List<Account> {
+                AccountFixtureFactory.createAccount('Teste01', '72107358010', Account.Type.PREMIUM, 10000000)
+            };
 
-            // AccountValidator validator = new AccountValidator();
+            AccountValidator validator = new AccountValidator();
 
-            // List<Account> validatededAccounts = filter.validateDocumentNumberTest(accounts);
+            List<Account> validatededAccounts = filter.validateDocumentNumberTest(accounts);
 
-            // System.assertEquals(accounts.size(), validatededAccounts.size());
+            System.assertEquals(accounts.size(), validatededAccounts.size());
 
+            accounts = new List<Account> {
+                AccountFixtureFactory.createAccount('Teste01', '72107358010')
+            };
+
+            System.assertEquals(accounts.size(), validatededAccounts.size());
+
+            
         }
         //validatePremiumAccountTest
         //schedulingEventTest
