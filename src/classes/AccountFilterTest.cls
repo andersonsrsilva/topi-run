@@ -5,10 +5,10 @@ public class AccountFilterTest {
     @isTest
     static void filterAccountsByDocumentNumberTest() {
 
-        List<Account> accounts = new List<Account>();
-        accounts.add(new Account(Name = 'Teste01', DocumentNumber__c = '67515642017'));
-        accounts.add(new Account(Name = 'Teste02', DocumentNumber__c = '28660268000179'));
-        insert accounts;
+        List<Account> accounts = new List<Account> {
+            AccountFixtureFactory.createAccount('Teste01', 100000000 , Account.Type.PREMIUM),
+            AccountFixtureFactory.createAccount('Teste02', 15000 , Account.Type.STANDARD)
+        };
 
         AccountFilter filter = new AccountFilter();
 
