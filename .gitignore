@@ -1,1 +1,11 @@
-.sfdx/tools/testresults/apex/
+force.json
+#package.xml
+build.properties
+.vim-force.com/
+\.vscode/
+
+sfdx-project\.json
+
+\.sfdx
+
+\.forceCode
