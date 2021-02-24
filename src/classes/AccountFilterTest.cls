@@ -10,8 +10,8 @@ public class AccountFilterTest {
     static void filterAccountsByDocumentNumberTest() {
 
         List<Account> accounts = new List<Account> {
-            AccountFixtureFactory.createAccount('Teste01', 100000000 , Account.Type.PREMIUM),
-            AccountFixtureFactory.createAccount('Teste02', 15000 , Account.Type.STANDARD)
+            AccountFixtureFactory.createAccount('Teste01', '72107358010'),
+            AccountFixtureFactory.createAccount('Teste02', '86519122000104')
         };
 
         AccountFilter filter = new AccountFilter();

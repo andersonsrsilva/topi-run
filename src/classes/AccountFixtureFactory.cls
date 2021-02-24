@@ -4,16 +4,15 @@
 
 public class AccountFixtureFactory {
 
-    public static Account newAccount(String name, Decimal annualRevenue, String category) {
+    public static Account newAccount(String name, String documentNumber) {
         return new Account(
             Name = name,
-            AnnualRevenue = annualRevenue,
-            Category__c = category
+            DocumentNumber__c = documentNumber
         );
     }
 
-    public static Account createAccount(String name, String documentNumber, Decimal billing) {
-        return createAccount (newAccount(name, documentNumber, billing));
+    public static Account createAccount(String name, String documentNumber) {
+        return createAccount (newAccount(name, documentNumber));
     }
 
     public static Account createAccount(Account account) {
