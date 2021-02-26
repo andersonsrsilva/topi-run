@@ -22,6 +22,7 @@ public class AccountValidatorTest {
         System.assertEquals(accounts.get(0).Name, validatededAccounts.get(0).Name);
     }
 
+    @isTest
     static void givenWhenValidatePremiumAccount() {
         accounts = new List<Account> {
             AccountFixtureFactory.createAccount('Teste01', '72107358010')
@@ -32,6 +33,7 @@ public class AccountValidatorTest {
         System.assertEquals(accounts.size(), validatededAccounts.size());
     }
 
+    @isTest
     static void givenWhenSchedulingEvent() {
         Account account = AccountFixtureFactory.createAccount('Teste01', '72107358010');
         account.AccountNumber = '1';

@@ -1,0 +1,2 @@
+GetAddressOutbountService service = new GetAddressOutbountService();
+ViaCepAddressResponse response = service.findAddress('01001000');
