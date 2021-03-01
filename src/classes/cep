@@ -1,2 +1,2 @@
 GetAddressOutbountService service = new GetAddressOutbountService();
-ViaCepAddressResponse response = service.findAddress('01001000');
+ZipCodeAddress response = service.findAddress('01001000');

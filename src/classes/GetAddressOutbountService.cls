@@ -4,7 +4,17 @@
 
 public class GetAddressOutbountService {
 
-    public ViaCepAddressResponse findAddress(String zipCode) {
+    ZipCodeAddressTransformer transformer;
+
+    public GetAddressOutbountService() {
+        transformer = new ZipCodeAddressTransformer();
+    }
+
+    public ZipCodeAddress findAddress(String zipCode) {
+        return transformer.toAddress(findViaCepAddress(zipCode));
+    }
+
+    public ViaCepAddressResponse findViaCepAddress(String zipCode) {
         HttpRequest request = new HttpRequest();
         request.setEndpoint('https://viacep.com.br/ws/' + zipCode + '/json/');
         request.setMethod('GET');
@@ -16,6 +26,10 @@ public class GetAddressOutbountService {
         String payload = response.getBody();
 
         System.debug(payload);
+
+        if(response.getStatusCode() >= 400) {
+            throw new CalloutException('service unavailable');
+        }
 
         return (ViaCepAddressResponse) JSON.deserialize(payload, ViaCepAddressResponse.class);
     }

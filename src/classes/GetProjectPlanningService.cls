@@ -23,6 +23,10 @@ public class GetProjectPlanningService {
 
         System.debug('payload: ' + payload);
 
+        if(response.getStatus != 200) {
+            //error
+        }
+
         return (ProjectEnterpriseResponse) JSON.deserialize(payload, ProjectEnterpriseResponse.class);
     }
 
