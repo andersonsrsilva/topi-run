@@ -1,0 +1,32 @@
+<template>
+
+    <div class="slds-p-around_small">
+
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_2-of-3">
+                <c-search-zipcode></c-search-zipcode>
+            </div>
+            <br>
+            <div class="slds-col slds-size_3-of-3">
+                <lightning-input label="Endereço" name="address" type="text" maxlength="255"></lightning-input>
+            </div>
+
+            <div class="slds-col slds-size_1-of-3 slds-p-right_small">
+                <lightning-input label="Número" name="streetNumber" type="text" maxlength="255" required></lightning-input>
+            </div>
+
+            <div class="slds-col slds-size_2-of-3">
+                <lightning-input label="Complemento" name="addressAdditionalInfo" type="text" maxlength="255"></lightning-input>
+            </div>
+
+            <div class="slds-col slds-size_2-of-3 slds-p-right_small">
+                <lightning-input label="Cidade" name="city" type="text" maxlength="255" required></lightning-input>
+            </div>
+
+            <div class="slds-col slds-size_1-of-3">
+                <lightning-input label="Estado" name="state" type="text" maxlength="255" required></lightning-input>
+            </div>
+        </div>
+
+    </div>
+</template>
