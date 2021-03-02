@@ -12,15 +12,18 @@ public virtual with sharing class ProjectRepository {
         return projects;
     }
 
-    virtual
-    public List<Project__c> findbyCode(String code) {
-        // return [
-        //     SELECT ProjectName__c, LastSyncDate__c, Budget__c, EndDate__c, StartDate__c, Status__c 
-        //     FROM Project__c
-        //     WHERE Id__c = :code
-        // ];
+    public Project__c findById(String id) {
+        List<Project__c> projects = findByIds(new List<String>{ id });
 
-        return null;
+        return !projects.isEmpty() ? projects.get(0) : null;
+    }
+
+    public List<Project__c> findByIds(List<String> ids) {
+        return [
+            SELECT Id, EndDate__c, StartDate__c, ProjectName__c
+            FROM Project__c
+            WHERE Id in :ids
+        ];
     }
 
 }

@@ -1,0 +1,19 @@
+{
+    "project": {
+        "name": "TopRun",
+        "startDate": "2021-03-01",
+        "endDate": "2021-03-15",
+        "sprints" : [
+            {
+              "name": "entrevista",
+              "startDate": "2021-03-16",
+              "endDate": "2021-03-30"
+            },
+            {
+                "name": "treinamento",
+                "startDate": "2021-03-16",
+                "endDate": "2021-03-30"
+            }
+        ]
+    }
+}
