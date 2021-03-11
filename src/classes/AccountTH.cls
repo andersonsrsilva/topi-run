@@ -1,8 +1,8 @@
 /*
-* @author anderson.silva
+*@author anderson.silva
 */
 
-public virtual class AccountTH extends TriggerHandler {
+public virtual class AccountTH  extends TriggerHandler {
 
     List<Account> newAccounts;
     Map<Id, Account> oldAccounts;
@@ -24,24 +24,21 @@ public virtual class AccountTH extends TriggerHandler {
 
     virtual
     override
+    public void afterInsert() {
+        System.debug('Trigger de Conta acionada ' + Trigger.operationType);
+        System.debug(JSON.serialize(newAccounts));
+    }
+
+    override
     public void beforeInsert() {
         System.debug('Trigger de Conta verificada insert ' + Trigger.operationType);
         validateDocumentNumber();
     }
 
-    virtual
     override
     public void beforeUpdate() {
         System.debug('Trigger de Conta verificada update ' + Trigger.operationType);
         validateDocumentNumber();
-    }
-
-    virtual
-    override
-    public void afterInsert() {
-        System.debug('Trigger de Conta acionada ' + Trigger.operationType);
-        System.debug(JSON.serialize(newAccounts));
-        validatePremiumAccount();
     }
 
     virtual
@@ -55,13 +52,8 @@ public virtual class AccountTH extends TriggerHandler {
     virtual
     public void validateDocumentNumber() {
         List<Account> filteredAccounts = this.filter.filterByChangedDocumentNumber(newAccounts, oldAccounts);
-        this.validator.validateDocumentNumber(filteredAccounts);
-    }
 
-    virtual
-    public void validatePremiumAccount() {
-        List<Account> filteredAccounts = this.filter.filterByChangedDocumentNumber(newAccounts, oldAccounts);
-        this.validator.validatePremiumAccount(filteredAccounts);
+        this.validator.validateDocumentNumber(filteredAccounts);
     }
 
 }

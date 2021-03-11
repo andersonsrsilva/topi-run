@@ -1,5 +1,6 @@
 import { api, LightningElement } from 'lwc';
- 
+import searchAddress from '@salesforce/apex/SearchAddressCtrl.searchAddress';
+
 export default class SearchZipcode extends LightningElement {
 
     @api
@@ -10,32 +11,37 @@ export default class SearchZipcode extends LightningElement {
         console.log('SearchZipcode Constructor');
     }
 
-    connectedCallback() {
-        console.log('EditAddress Connected Callback');
-    }
+     connectedCallback() {
+        //console.log('EditAddress Connected Callback');
+     }
 
     renderedCallback() {
-        console.log('EditAddress Redered Callback');
+        //console.log('EditAddress Redered Callback');
     }
 
     handleBlur(event) {
 
-        if(!event.target.value) return;
+        if(!event.target.value || event.target.value == this.zipCode) return;
 
-        this.publishAddressChanged();
+        let _zipCode = Object.assign(event.target.value.replace('-', ''));
 
+        searchAddress({ zipCode : _zipCode })
+        .then(response => {
+            let address = response;
+            this.publishAddressChanged(address);
+        }).catch(response => {
+            this.template.querySelector("[data-name='zipcode']")
+            .setCustomValidity(response.body.message)
+            .reportValidity();
+        });
+
+        console.log('final do blur');
+        
     }
 
-    publishAddressChanged() {
+    publishAddressChanged(address) {
         let searchedAddress = new CustomEvent ('searchedaddress', {
-            detail: {
-                street: 'Rua TopiRun',
-                streetNumber: '2020',
-                additionaInfo: 'Turma 1',
-                zipCode: '72880-000',
-                city: 'Cidade Ocidental',
-                state: 'GO'
-            }
+            detail: address
         });
 
         this.dispatchEvent(searchedAddress);

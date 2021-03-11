@@ -1,7 +1,3 @@
-/*
-* @author anderson.silva
-*/
-
 public with sharing class AccountFilter {
 
     public List<Account> filterByChangedDocumentNumber(List<Account> newAccounts, Map<Id,Account> oldAccounts) {

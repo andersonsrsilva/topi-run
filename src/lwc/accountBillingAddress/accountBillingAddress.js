@@ -18,12 +18,16 @@ export default class AccountBillingAddress extends LightningElement {
         }
     }
 
-    connectedCallback() {
-        console.log('EditAddress Connected Callback');
-    }
+    // connectedCallback() {
+    //     console.log('EditAddress Connected Callback');
+    // }
 
-    renderedCallback() {
-        console.log('EditAddress Redered Callback');
+    // renderedCallback() {
+    //     console.log('EditAddress Redered Callback');
+    // }
+
+    handleChangedAddress(event) {
+        this.billingAddress = event.detail;
     }
 
 }

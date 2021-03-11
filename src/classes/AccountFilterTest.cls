@@ -1,7 +1,3 @@
-/*
-* @author anderson.silva
-*/
-
 @isTest
 public class AccountFilterTest {
 
@@ -9,11 +5,10 @@ public class AccountFilterTest {
     @isTest
     static void filterAccountsByDocumentNumberTest() {
 
-        Map<String,SObject> records = AccountFixtureFactory.createIntegratedScenery();
-
-        List<Account> accounts = new List<Account> {
-            (Account) records.get('account')
-        };
+        List<Account> accounts = new List<Account>();
+        accounts.add(new Account(Name = 'Teste01', DocumentNumber__c = '67515642017'));
+        accounts.add(new Account(Name = 'Teste02', DocumentNumber__c = '28660268000179'));
+        insert accounts;
 
         AccountFilter filter = new AccountFilter();
 

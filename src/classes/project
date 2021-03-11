@@ -1,2 +1,0 @@
-GetProjectPlanningService service = new GetProjectPlanningService();
-service.integrationEnterpriseProcessor('01932190123');

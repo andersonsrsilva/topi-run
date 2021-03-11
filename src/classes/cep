@@ -1,2 +1,0 @@
-GetAddressOutbountService service = new GetAddressOutbountService();
-ZipCodeAddress response = service.findAddress('01001000');
