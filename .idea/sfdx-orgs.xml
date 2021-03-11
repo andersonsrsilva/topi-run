@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SFDXOrgManager">
+    <option name="conventionalOrgs">
+      <SFDXConventionalOrg>
+        <option name="accessToken" value="15b409059adcdaaed91365f92bf44e7d6950c1983194e8ded9f5adb22c73614c82c96e66bedb3422e3df0aee6558edb000c858d77a1056ac4bc887153b59580d0f456feedeb9cb5e485db0877c8307f7a025431a5388b0543def5838c25b10c8c909be715e5b4ff81e4169b10eb7b53aca032e041232:69cf420e5e3294d2d62b028747e91aeb" />
+        <option name="clientId" value="PlatformCLI" />
+        <option name="connectedStatus" value="Connected" />
+        <option name="defaultMarker" value="(U)" />
+        <option name="instanceUrl" value="https://lpconsulting2-dev-ed.my.salesforce.com" />
+        <option name="lastUsed" value="1615331582173" />
+        <option name="loginUrl" value="https://login.salesforce.com/" />
+        <option name="orgId" value="00D5Y000001N5jyUAC" />
+        <option name="username" value="andersonsrsilva@gmail.com.andersonsrsilva" />
+      </SFDXConventionalOrg>
+      <SFDXConventionalOrg>
+        <option name="accessToken" value="f8409321e728e6de58c7ccc6b50f49220ee9863fd5dbff71f3bbe1e3891fc0ad780d82538ee5568993322752627c49e1a5fa4eb4770379115947d3c4cb7ee528bdc015dc2c5d284143d3d0dc4970915217b7f061384a9fed554defae8c8094455eb1f8435e1a67c38c88a230e573182f1161928026f3:da5e75678a07de8a6a7bd016101b7b39" />
+        <option name="clientId" value="PlatformCLI" />
+        <option name="connectedStatus" value="Connected" />
+        <option name="defaultDevHubUsername" value="true" />
+        <option name="defaultMarker" value="(D)" />
+        <option name="instanceUrl" value="https://universotecnologia-dev-ed.my.salesforce.com" />
+        <option name="lastUsed" value="1615331576102" />
+        <option name="loginUrl" value="https://universotecnologia-dev-ed.my.salesforce.com" />
+        <option name="orgId" value="00D5Y000001ccFhUAI" />
+        <option name="username" value="andersonsrsilva@gmail.com.topirun" />
+      </SFDXConventionalOrg>
+    </option>
+  </component>
+</project>

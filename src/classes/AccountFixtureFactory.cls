@@ -13,12 +13,12 @@ public class AccountFixtureFactory {
     }
 
     public static Account newAccount(String name, String documentNumber, City__c city, Cnae__C cnae) {
-        Accout account = newAccount(name, documentNumber);
-        account.BillingCity__c = city.Id;
-        account.BillingCity__r = city;
-        account.Cnae__c = cnae.Id;
-        account.Cnae__r = cnae;
-
+        Accout account = newAccount(
+            name, documentNumber);
+            account.BillingCity__c = city.Id;
+            account.BillingCity__r = city;
+            account.Cnae__c = cnae.Id;
+            account.Cnae__r = cnae;
         return account;
     }
 

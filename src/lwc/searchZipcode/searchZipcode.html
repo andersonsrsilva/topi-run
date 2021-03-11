@@ -3,9 +3,11 @@
     <div>
         <lightning-input 
             label="CEP"
-            name="zipcode" 
-            pattern="(^\d{5}(?:[-\s]\d{4})?$)"
+            name="zipcode"
+            value={zipCode} 
+            pattern="([0-9]{5}-[0-9]{3})"
             maxlength="9"
+            onblur={handleBlur}
             message-when-bad-input="Digite um cep válido"
         ></lightning-input>
     </div>

@@ -2,7 +2,7 @@
 * @author anderson.silva
 */
 
-public virtual class AccountTH  extends TriggerHandler {
+public virtual class AccountTH extends TriggerHandler {
 
     List<Account> newAccounts;
     Map<Id, Account> oldAccounts;

@@ -11,6 +11,7 @@ public class GetProjectPlanningService {
     }
 
     ProjectEnterpriseResponse getDataSynchronize() {
+
         HttpRequest request = new HttpRequest();
         request.setEndpoint('https://run.mocky.io/v3/58d750c1-31bf-45ae-b361-bedecacf55a2');
         request.setMethod('PUT');

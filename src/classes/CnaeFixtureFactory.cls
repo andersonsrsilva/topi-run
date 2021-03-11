@@ -10,7 +10,7 @@ public class CnaeFixtureFactory {
     }
 
     public static CNAE__c createCnae() {
-        return createCnae(newCnae);
+        return createCnae(newCnae());
     }
 
     public static CNAE__c createCnae(CNAE__c Cnae) {
