@@ -40,9 +40,13 @@ public with sharing class DateTimeHelperTest {
 
     @isTest
     private static void formatDate() {
+        
         Date day = Date.newInstance(2017, 1, 1);
 
+        System.assert(DateTimeHelper.formatDate(day, 'dd/MM/yyyy') == '01/01/2017');
         System.assert(DateTimeHelper.format(day, 'dd/MM/yyyy') == '01/01/2017');
+        System.assert(DateTimeHelper.format( (Datetime) null, 'dd/MM/yyyy') == '');
+
     }
 
     @isTest

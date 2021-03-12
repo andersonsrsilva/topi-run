@@ -16,11 +16,14 @@ public with sharing class DateTimeHelper {
         return timestamp.addSeconds( -1 * seconds );
     }
 
+    //@deprecated 
+    //@see format 
     public static String formatDate (Date dateInfo, String pattern) {
-        return format (dateInfo, pattern);
+        return format(dateInfo, pattern);
     }
 
-    public static String format (Date dateInfo, String pattern) {
+    public static String format( Date dateInfo, String pattern ) {
+        if (dateInfo == null) return '';        
         Datetime dt = DateTime.newInstance(dateInfo.year(), dateInfo.month(), dateInfo.day());
         return dt.format(pattern);
     }
