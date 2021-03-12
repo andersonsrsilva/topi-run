@@ -9,6 +9,7 @@ public virtual class AccountTH  extends TriggerHandler {
 
     AccountFilter filter;
     AccountValidator validator;
+    AccountEventEnricher accountEventEnricher;
 
     public AccountTH() {
         this((List<Account>) Trigger.new, (Map<Id, Account>) Trigger.oldMap);
@@ -20,6 +21,7 @@ public virtual class AccountTH  extends TriggerHandler {
         
         this.filter = new AccountFilter();
         this.validator = new AccountValidator();
+        this.accountEventEnricher = new AccountEventEnricher();
     }
 
     virtual
@@ -54,6 +56,14 @@ public virtual class AccountTH  extends TriggerHandler {
         List<Account> filteredAccounts = this.filter.filterByChangedDocumentNumber(newAccounts, oldAccounts);
 
         this.validator.validateDocumentNumber(filteredAccounts);
+    }
+
+    virtual
+    public void createNewAccountPremiunScheduleEvent() {
+        List<Account> premiumAccount = this.filter.filterByCategoryAndRevenue(newAccounts, Account.Type.PREMIUM, 1000000);
+
+        this.accountEventEnricher.createSheduleEventForPremiunAccount(premiumAccount);
+
     }
 
 }
